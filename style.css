@@ -540,6 +540,107 @@
   margin-top: 20px;
 }
 
+.iteration-slide {
+  background:
+    radial-gradient(circle at 13% 86%, rgba(255, 91, 0, 0.1), transparent 25%),
+    linear-gradient(120deg, #f8f7f4 0%, #f4f2ed 58%, #ffffff 100%);
+}
+
+.iteration-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.iteration-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.iteration-steps > div,
+.prompt-skeleton {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.05);
+}
+
+.iteration-steps > div {
+  position: relative;
+  min-height: 164px;
+  padding: 23px 22px 22px 66px;
+}
+
+.iteration-steps span {
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--soft-orange);
+  color: var(--torras-orange);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.iteration-steps strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.iteration-steps p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.56;
+}
+
+.prompt-skeleton {
+  padding: 24px 28px 20px;
+  border-top: 5px solid var(--torras-orange);
+}
+
+.small-label {
+  margin: 0 0 13px;
+  color: var(--torras-orange);
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+.prompt-skeleton ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.prompt-skeleton li {
+  padding: 7px 0 9px 4px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.42;
+}
+
+.prompt-skeleton li:last-child {
+  border-bottom: 0;
+}
+
+.prompt-skeleton b {
+  font-size: 17px;
+}
+
+.prompt-skeleton span {
+  color: var(--muted);
+}
+
 .torras-deck .slide:not(.prompt-slide),
 .torras-deck .slide:not(.prompt-slide) h1,
 .torras-deck .slide:not(.prompt-slide) h2,
@@ -863,6 +964,10 @@
   }
 
   .prompt-anatomy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .iteration-layout {
     grid-template-columns: 1fr;
   }
 }

@@ -75,15 +75,15 @@
     <p class="kicker">03 / 工作流</p>
     <h2 class="h2">先做画面方案，再写提示词</h2>
     <div class="process mt-l">
-      <div><span>01</span><strong>明确产品调性</strong><p>卖点、使用方式、目标人群、品牌气质。</p></div>
+      <div><span>01</span><strong>明确产品调性</strong><p>目标人群、核心功能、情绪气质，先写成一句画面 brief。</p></div>
       <div><span>02</span><strong>找参考图</strong><p>场景、人物、动作、产品、色调各有分工。</p></div>
       <div><span>03</span><strong>补充生活故事</strong><p>人物为什么在这个场景里这样使用产品。</p></div>
-      <div><span>04</span><strong>设计视觉重点</strong><p>相机距离、手机角度、光影和留白如何突出产品。</p></div>
-      <div><span>05</span><strong>写提示词并迭代</strong><p>先细致描述，再根据结果删减和加限制。</p></div>
+      <div><span>04</span><strong>确定产品视觉位置</strong><p>展示哪一面、处在前中后景、明暗边界和不可遮挡的结构。</p></div>
+      <div><span>05</span><strong>写提示词并迭代</strong><p>先按六模块写清楚，再每轮只改一个变量。</p></div>
     </div>
     <p class="slide-copy">效率来自前期判断。画面方案越清楚，后面越少靠“碰运气”。</p>
     <aside class="notes">
-      <p><strong>这一页讲流程。</strong>我的习惯不是先写提示词，而是先搭建画面方案：产品卖点是什么，谁在用，为什么这样用，镜头应该怎么拍。</p><p>提示词只是把这个方案翻译给 AI。</p>
+      <p><strong>这一页讲流程。</strong>第一步的产出不是几个形容词，而是一句画面 brief：谁在什么状态下，以什么方式使用产品，要传达什么情绪。然后再搭建参考图、生活故事和镜头方案。</p><p>第四步要把产品的位置说具体：展示哪一面、在前中后景哪里、靠什么明暗边界突出、哪些结构绝不能被遮挡。提示词只是把这个方案翻译给 AI。</p>
     </aside>
   </section>
 
@@ -164,6 +164,35 @@
     <p class="takeaway anatomy-takeaway">同一条提示词不是“堆描述”，而是把每一句放进它该承担的模块里。</p>
     <aside class="notes">
       <p><strong>这一页和上一页使用完全相同的六个模块，只是把抽象方法落到一条真实提示词里。</strong>左侧不是重新排写的文案，而是当时实际发送给 AI 的截图；不同颜色的编号，直接指出各部分在原文中的位置。</p><p>例如，第一段先给出画面目标和场景参考；产品段单独说明手机壳和支架结构；人物段再补足打球后的休息行为和镜头关系；最后统一列出避免项。这样做的好处是，后续出现问题时可以准确判断该改哪一块，而不是整段提示词推倒重来。</p><p>狗狗案例会在后面用于讲功能动作的准确描述；网球案例更适合先讲清完整提示词的组织结构。</p>
+    </aside>
+  </section>
+
+  <section class="slide iteration-slide" data-title="Iteration Template">
+    <p class="kicker">提示词模板 / 从方案到迭代</p>
+    <h2 class="h2">先用六模块写清楚，<span class="accent">再每轮只改一个变量</span></h2>
+    <p class="slide-copy">首轮不是追求成片，而是验证“故事、产品位置、人物动作”是否已经成立；选出最接近的一张，再针对一个问题继续修正。</p>
+    <div class="iteration-layout mt-l">
+      <div class="iteration-steps">
+        <div><span>01</span><strong>首轮：验证关系</strong><p>一次生成 4-6 张，只看场景故事、人物状态和产品位置是否合理。</p></div>
+        <div><span>02</span><strong>选图：保留正确部分</strong><p>选最接近的一张作为下一轮参考，不要把已经正确的场景和构图全部推倒。</p></div>
+        <div><span>03</span><strong>修改：只动一个模块</strong><p>动作不自然就改人物与镜头；产品不清楚就改产品与功能；不要同时重写全部内容。</p></div>
+        <div><span>04</span><strong>收尾：修复细节</strong><p>最后再处理皮肤、材质、支架结构、清晰度、色调和瑕疵。</p></div>
+      </div>
+      <div class="prompt-skeleton">
+        <p class="small-label">可复制提示词骨架</p>
+        <ol>
+          <li><b>画面目标：</b><span>卖点、画幅、整体氛围。</span></li>
+          <li><b>参考图分工：</b><span>产品、人物、动作、色调分别参考什么。</span></li>
+          <li><b>场景故事：</b><span>人物为什么在这里这样使用产品。</span></li>
+          <li><b>产品与功能：</b><span>展示哪一面、结构角度、必须清楚的细节。</span></li>
+          <li><b>人物与镜头：</b><span>动作、视线、景深、相机距离和构图。</span></li>
+          <li><b>避免问题：</b><span>变形、遮挡、错位、摆拍、杂乱、文字水印。</span></li>
+        </ol>
+      </div>
+    </div>
+    <p class="takeaway">不用每轮都重写整段提示词。先定位问题属于哪个模块，再只修改这一个模块。</p>
+    <aside class="notes">
+      <p><strong>这是把方法真正用起来的一页。</strong>第一轮先看大关系：故事是否成立、产品位置是否合理、人物有没有真实行为。不要一开始就花很多时间修皮肤和细节。</p><p>选出最接近的一张作为下一轮的基础。之后每轮只改一个模块，例如动作、人物、产品结构、光影或食物逻辑。最后才做清晰度、材质、皮肤和小瑕疵修复。</p><p>右侧六模块就是可直接复制的提示词骨架。它和第 05、06 页完全对应。</p>
     </aside>
   </section>
 
@@ -391,17 +420,18 @@
 
   <section class="slide" data-title="Checklist">
     <p class="kicker">08 / 可复用检查表</p>
-    <h2 class="h2">每次出图前，用这张表快速检查</h2>
+    <h2 class="h2">每次出图前与每轮迭代后，用这张表快速检查</h2>
     <div class="checklist mt-l">
       <label><span></span>这张图的核心卖点是否一句话说得清？</label>
       <label><span></span>参考图是否各有分工，并且本身有质感？</label>
       <label><span></span>人物为什么这样使用产品，生活逻辑是否成立？</label>
-      <label><span></span>产品角度、支架、镜头保护框是否清楚？</label>
+      <label><span></span>产品展示哪一面、位于什么景别、不可遮挡的结构是否明确？</label>
       <label><span></span>光影、色块和景深是否在突出产品？</label>
       <label><span></span>避免项是否具体到 AI 容易犯错的地方？</label>
+      <label><span></span>这一轮是否只修改一个模块，并保留了已经正确的部分？</label>
     </div>
     <aside class="notes">
-      <p><strong>这一页是可复用清单。</strong>以后每次出图前，可以用这几个问题快速检查提示词和参考图是否完整。</p><p>它的作用是减少返工，而不是限制创意。</p>
+      <p><strong>这一页是可复用清单。</strong>出图前检查画面 brief、参考图、生活逻辑、产品位置和视觉重点；迭代后再检查本轮是否只改了一个问题。</p><p>它的作用是减少返工，而不是限制创意。</p>
     </aside>
   </section>
 
