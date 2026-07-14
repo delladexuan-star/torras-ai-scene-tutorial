@@ -403,13 +403,20 @@
   box-shadow: 0 18px 36px rgba(17, 17, 17, 0.12);
 }
 
-.prompt-source-card img {
-  display: block;
-  width: 100%;
-  height: min(510px, calc(100vh - 390px));
-  object-fit: contain;
+.prompt-source-annotated {
+  padding: 14px;
+}
+
+.annotated-prompt {
+  position: relative;
+  min-height: min(520px, calc(100vh - 390px));
+  overflow: hidden;
   border-radius: 16px;
-  background: #0d0d0d;
+  background-color: #0d0d0d;
+  background-image: url("media/case2-prompt-after.jpg");
+  background-size: 100% auto;
+  background-position: center 38%;
+  background-repeat: no-repeat;
 }
 
 .prompt-source-card figcaption {
@@ -418,6 +425,65 @@
   font-size: 15px;
   line-height: 1.45;
 }
+
+.prompt-tag {
+  position: absolute;
+  left: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px 6px 7px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: rgba(13, 13, 13, 0.9);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  color: var(--tag-color);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.prompt-tag b {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--tag-color);
+  color: #fff;
+  font-size: 11px;
+}
+
+.prompt-tag::after {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  width: var(--line-width);
+  height: 2px;
+  background: var(--tag-color);
+  content: "";
+  opacity: 0.92;
+}
+
+.prompt-tag::before {
+  position: absolute;
+  top: calc(50% - 4px);
+  left: calc(100% + var(--line-width) + 5px);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tag-color);
+  box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.75);
+  content: "";
+}
+
+.tag-goal { top: 6%; --tag-color: #ff6a00; --line-width: 82px; }
+.tag-ref { top: 18%; --tag-color: #4fb8ff; --line-width: 118px; }
+.tag-story { top: 39%; --tag-color: #58c88a; --line-width: 105px; }
+.tag-product { top: 27%; --tag-color: #f66eab; --line-width: 145px; }
+.tag-camera { top: 51%; --tag-color: #a889ff; --line-width: 96px; }
+.tag-avoid { top: 73%; --tag-color: #f0c14b; --line-width: 126px; }
 
 .anatomy-grid {
   display: grid;
@@ -449,6 +515,13 @@
   font-size: 14px;
   font-weight: 800;
 }
+
+.anatomy-card.goal > span { background: #ff6a00; }
+.anatomy-card.ref > span { background: #319ee7; }
+.anatomy-card.story > span { background: #43aa72; }
+.anatomy-card.product > span { background: #e55b95; }
+.anatomy-card.camera > span { background: #8870d7; }
+.anatomy-card.avoid > span { background: #c9981a; }
 
 .anatomy-card strong {
   display: block;
