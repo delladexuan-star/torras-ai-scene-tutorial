@@ -88,9 +88,9 @@
   </section>
 
   <section class="slide" data-title="References">
-    <p class="kicker">04 / 参考图不是越多越好</p>
-    <h2 class="h2">参考图要分工，<span class="accent">而且本身要有质感</span></h2>
-    <p class="slide-copy">AI 不只会参考内容，也很容易继承参考图的光影、构图和气质。所以参考图不是越多越好，而是每张图要回答一个问题。</p>
+    <p class="kicker">04 / 参考图分工</p>
+    <h2 class="h2">参考图要分工，<span class="accent">提示词才会更准确</span></h2>
+    <p class="slide-copy">每张图只负责一类信息。这样既能减少相互干扰，也能让产品、人物、动作和氛围更快被 AI 找准。</p>
     <div class="ref-card-grid mt-l">
       <div class="ref-card">
         <img src="media/product.jpg" alt="产品参考">
@@ -113,33 +113,55 @@
         <p>控制手势、姿势、产品使用关系，避免动作不自然。</p>
       </div>
     </div>
-    <p class="takeaway">同一个项目里，很多参考图可以重复使用。色调参考、人物参考的复用，反而会让系列页面更统一。</p>
+    <p class="takeaway">参考图本身要有质感：AI 往往会继承它的光影、构图和气质。同一项目中复用色调和人物参考，也会让系列图更统一。</p>
     <aside class="notes">
-      <p><strong>强调参考图的分工。</strong>参考图不是越多越好，而是每张图要负责一类信息。</p><p>同时，参考图本身要有质感，因为 AI 很容易继承参考图的光影、构图和气质。同一个项目里，色调参考和人物参考可以重复使用，反而能增强系列感。</p>
+      <p><strong>这一页的核心是“分工”，不是堆数量。</strong>产品图负责把结构讲清楚，色调图负责定光影和情绪，人物图负责找准目标人群，动作图负责使用方式。</p><p>这样写提示词时，每一段都有明确来源，也更容易判断生成失败时该补哪一类参考。参考图本身最好已经具备质感，因为 AI 往往会继承它的光影、构图和整体气质。</p><p>同一个项目中，人物和色调参考可以反复复用。它们不是限制创意，反而能让同一组场景图更像一个完整系列。</p>
     </aside>
   </section>
 
   <section class="slide" data-title="Prompt Structure">
     <p class="kicker">05 / 提示词结构</p>
-    <h2 class="h2">提示词不是描述越多越好，而是<span class="accent">要描述准确</span></h2>
-    <p class="slide-copy">准确不是堆形容词，而是把“产品、人物、动作、场景、镜头、避免项”之间的关系说清楚。</p>
-    <div class="prompt-grid mt-l">
-      <div><strong>画面目标</strong><span>这张图为了展示什么卖点。</span></div>
-      <div><strong>参考图分工</strong><span>每张参考图只负责一类信息。</span></div>
-      <div><strong>场景故事</strong><span>人物为什么这样使用产品。</span></div>
-      <div><strong>产品主体</strong><span>型号、颜色、材质、必须清楚的结构。</span></div>
-      <div><strong>人物动作</strong><span>手、眼神、身体姿态和产品关系。</span></div>
-      <div><strong>环境道具</strong><span>符合真实场景，但不要堆叠。</span></div>
-      <div><strong>相机与构图</strong><span>近景、低机位、浅景深、比例。</span></div>
-      <div><strong>避免问题</strong><span>变形、遮挡、错位、摆拍、杂乱。</span></div>
+    <h2 class="h2">提示词不是越长越好，而是<span class="accent">一份可执行的画面说明</span></h2>
+    <p class="slide-copy">把不同信息放进清晰的模块里，AI 才能理解“什么必须准确、什么用于定调、什么需要避免”。</p>
+    <div class="prompt-grid prompt-modules mt-l">
+      <div><strong>01 / 画面目标</strong><span>卖点、画幅、整体氛围。</span></div>
+      <div><strong>02 / 参考图分工</strong><span>产品、人物、动作、色调各自参考谁。</span></div>
+      <div><strong>03 / 场景故事</strong><span>人物为什么在这里，以这种方式使用产品。</span></div>
+      <div><strong>04 / 产品与功能</strong><span>型号、材质、角度，以及必须清楚的结构。</span></div>
+      <div><strong>05 / 人物与镜头</strong><span>动作、视线、景深、相机距离和构图。</span></div>
+      <div><strong>06 / 避免问题</strong><span>变形、遮挡、错位、摆拍、杂乱和文字水印。</span></div>
     </div>
     <aside class="notes">
-      <p><strong>这一页讲提示词结构。</strong>重点不是写得越长越好，而是描述准确。</p><p>要把产品、人物、动作、环境、相机和避免问题之间的关系说清楚，尤其是产品和人的使用关系。</p>
+      <p><strong>提示词更像一份给 AI 的拍摄说明，而不是文学描写。</strong>先告诉它这张图要解决什么卖点，再明确各类参考图负责什么，接着补上人物为什么会这样使用产品。</p><p>对于功能型产品，产品与功能结构必须单独讲清楚；动作和镜头也要同时写，因为动作是否成立，直接影响产品是否自然入镜。</p><p>最后再写避免项，把最容易出错的地方提前锁住。下面会直接用真实提示词演示这六个模块如何落到一句句话里。</p>
+    </aside>
+  </section>
+
+  <section class="slide prompt-anatomy-slide" data-title="Prompt Anatomy">
+    <p class="kicker">06 / 真实提示词拆解</p>
+    <h2 class="h2">一条提示词，如何变成<span class="accent">可执行的画面方案</span></h2>
+    <p class="slide-copy">以“人和狗狗互动”案例为例。左侧是实际发送的提示词，右侧是它对应的六个信息模块。</p>
+    <div class="prompt-anatomy-layout mt-l">
+      <figure class="prompt-source-card">
+        <img src="media/case1-prompt-after.jpg" alt="人和狗狗互动案例的真实提示词截图">
+        <figcaption>实际提示词：不是一次写完，而是围绕卖点逐步补足。</figcaption>
+      </figure>
+      <div class="anatomy-grid">
+        <div class="anatomy-card"><span>A</span><strong>场景与情绪</strong><p>街拍、暖阳、胶片颗粒；人物捧花牵狗散步，先定温馨生活感。</p></div>
+        <div class="anatomy-card"><span>B</span><strong>产品外观</strong><p>深灰手机壳、圆形背板、镜头框、支架环，明确“只参考产品样式”。</p></div>
+        <div class="anatomy-card"><span>C</span><strong>使用关系</strong><p>食指和中指穿过支架环，手机靠环悬挂，而不是捏住手机边缘。</p></div>
+        <div class="anatomy-card"><span>D</span><strong>功能结构</strong><p>写清支架抬起角度、环面方向与旋转位置，减少结构误解。</p></div>
+        <div class="anatomy-card"><span>E</span><strong>镜头构图</strong><p>低机位近景，让手、花、狗绳、手机和狗在同一条叙事线里。</p></div>
+        <div class="anatomy-card"><span>F</span><strong>避免问题</strong><p>提前限制变形、遮挡、错位、多部手机、屏幕露出和文字水印。</p></div>
+      </div>
+    </div>
+    <p class="takeaway anatomy-takeaway">氛围定调 → 产品定型 → 动作成立 → 功能准确 → 构图突出 → 风险限制。</p>
+    <aside class="notes">
+      <p><strong>这里不是让大家照抄这一整段提示词，而是看它的组织方式。</strong>最开始的场景与情绪，先把画面的温暖街拍感定住；随后单独描述产品外观，避免 AI 把参考产品的摆放角度也带进来。</p><p>接下来最关键的是使用关系和功能结构。这里没有只说“手拿手机”，而是说清两根手指如何穿过支架环、手机靠什么悬挂，以及支架环抬起和旋转的具体关系。</p><p>最后的镜头构图让产品、花、狗绳和狗同时进入一个生活故事；避免项则把这一类图最常见的错误提前关掉。这种模块化写法，也方便后续针对某一个问题单独迭代。</p>
     </aside>
   </section>
 
   <section class="slide" data-title="Visual Director">
-    <p class="kicker">06 / 不只是提示词，也是视觉导演</p>
+    <p class="kicker">07 / 不只是提示词，也是视觉导演</p>
     <h2 class="h2">好看的图，往往提前设计了<span class="accent">明暗关系和色块关系</span></h2>
     <div class="director-grid mt-l">
       <div>

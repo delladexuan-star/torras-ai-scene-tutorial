@@ -339,6 +339,10 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.prompt-grid.prompt-modules {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .prompt-grid > div,
 .method-cards > div,
 .analysis-grid > div,
@@ -374,6 +378,93 @@
   color: var(--muted);
   font-size: 16px;
   line-height: 1.58;
+}
+
+.prompt-anatomy-slide {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255, 91, 0, 0.12), transparent 24%),
+    linear-gradient(120deg, #f5f2ec 0%, #f8f7f4 60%, #ffffff 100%);
+}
+
+.prompt-anatomy-layout {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.prompt-source-card {
+  margin: 0;
+  min-height: 0;
+  padding: 16px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 24px;
+  background: #171717;
+  box-shadow: 0 18px 36px rgba(17, 17, 17, 0.12);
+}
+
+.prompt-source-card img {
+  display: block;
+  width: 100%;
+  height: min(510px, calc(100vh - 390px));
+  object-fit: contain;
+  border-radius: 16px;
+  background: #0d0d0d;
+}
+
+.prompt-source-card figcaption {
+  margin: 13px 6px 2px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.anatomy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.anatomy-card {
+  position: relative;
+  min-height: 135px;
+  padding: 22px 24px 18px 66px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.05);
+}
+
+.anatomy-card > span {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--torras-orange);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.anatomy-card strong {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 21px;
+}
+
+.anatomy-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.52;
+}
+
+.anatomy-takeaway {
+  margin-top: 20px;
 }
 
 .torras-deck .slide:not(.prompt-slide),
@@ -691,9 +782,14 @@
   .process,
   .ref-card-grid,
   .prompt-grid,
+  .prompt-grid.prompt-modules,
   .method-cards,
   .analysis-grid,
   .bad-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prompt-anatomy-layout {
+    grid-template-columns: 1fr;
   }
 }
